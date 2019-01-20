@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+	<head>
+	
+			<title>
+			Email sending
+			</title>
+			
+			
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"> </script>
+		
+		<script type="text/javascript">
+		
+				$(document).ready(function(){
+				
+					$('#submit').click(function(){
+					
+						var name=$('#name').val();
+						var email=$('#email').val();
+						
+						var varData='name=' + name + 'email=' + email;
+						console.log(varData);
+						
+						$.ajax({
+						
+						type:"POST",
+						url:'mail.php',
+						data:varData,
+						success:function() {
+						
+						alert("it was a success");
+						
+						
+						
+						}
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						});
+						
+						
+					});
+				
+				
+				
+				
+				
+				
+				
+				
+				});
+		
+		
+		</script>
+	
+	</head>
+	
+	
+			<body>
+			
+			<label for="name">Name</label>
+			<input type="text" name="name" id="name"/>
+			
+			<br><br>
+			
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email"/>
+			
+			<br><br>
+			
+			<div id="submit" style="background-color:#cccccc;">Click to Submit</div>
+			
+	</body>
+	</html>
+			
+			
+			
+			
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
